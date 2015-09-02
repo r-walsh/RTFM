@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="rtfmApp" lang="en">
+<head>
+	<link rel="stylesheet" href="styles.css">
+	<meta charset="UTF-8">
+	<title>RTFM</title>
+</head>
+<body controller="threadCtrl">
+
+<div class="container">
+
+<ng-view></ng-view>
+	
+</div>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-route.js"></script>
+<script src="https://cdn.firebase.com/libs/angularfire/1.1.2/angularfire.min.js"></script>
+<script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
+<script src="app/app.js"></script>
+<script src="app/threads/threadsCtrl.js"></script>
+<script src="app/threads/threadCtrl.js"></script>
+<script src='app/threads/threadService.js'></script>
+<script src='app/threads/threadsService.js'></script>
+</body>
+</html>
