@@ -1,0 +1,12 @@
+<div>
+	<a href="#/threads">Home</a>
+	<form name="newCommentsForm">
+		<input ng-model="newCommentText" placeholder="Write a comment..." type="text" required />
+		<input ng-model="username" placeholder="Username..." type="text" required />
+		<button ng-disabled="newCommentsForm.$invalid" ng-click="createComment(username, newCommentText)">Add Comment</button>
+	</form>
+
+	<ul>
+		<li ng-repeat="comment in comments">{{ comment.username }} : {{ comment.text }}</li>
+	</ul>
+</div>

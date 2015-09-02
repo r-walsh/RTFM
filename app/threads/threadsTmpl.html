@@ -1,0 +1,20 @@
+<div>
+
+	<p>Threads</p>
+
+	<form name="newThreadForm">
+		<input ng-model="newThreadTitle" placeholder="New thread title..." required type="text" />
+		<input ng-model="username" plcaeholder="Username..." required type="text" />
+		<button ng-disabled="newThreadForm.$invalid" ng-click="createThread(username, newThreadTitle)">Add Thread</button>
+	</form>
+
+	<ul>
+		<li ng-repeat="thread in threads">
+			<a href="#/threads/{{ thread.$id }}">
+				<span>{{ thread.title }}</span>
+				<span>(by {{ thread.username }})</span>
+			</a>
+		</li>
+	</ul>
+
+</div>
